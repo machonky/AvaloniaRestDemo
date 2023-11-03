@@ -7,6 +7,4 @@ Also the App class uses some .NET Standard tooling for DI as well as some techni
 
 There is also some tricks on how to use appsettings.json in a cross platform way.
 
-RestSharp is employed in the ApiClient - which is in turn used by a DataService which abstracts away the web stuff, so theoretically we can have mock data services for design time...Theoretically.
-
-There's some design time issues to solve, but Runtime works just on Browser and Desktop.
+RestSharp is employed in the ApiClient - which is in turn used by a DataService which abstracts away the web stuff, so theoretically we can have mock data services for design time...
