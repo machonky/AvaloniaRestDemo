@@ -52,7 +52,7 @@ public class DesignDataService : IEntitiesDataService<WeatherForecast>
 {
     private static readonly string[] Summaries = new[]
     {
-        "DxFreezing", "DxBracing", "DxChilly", "DxCool", "DxMild", "DxWarm", "DxBalmy", "DxHot", "DxSweltering", "DxScorching"
+        "Freezing (Design)", "Bracing (Design)", "Chilly (Design)", "Cool (Design)", "Mild (Design)", "Warm (Design)", "Balmy (Design)", "Hot (Design)", "Sweltering (Design)", "Scorching (Design)"
     };
 
     public Task<IEnumerable<WeatherForecast>> FetchEntitiesAsync()

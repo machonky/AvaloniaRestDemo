@@ -15,9 +15,6 @@ public class MainViewModel : ViewModelBase
 
     public string Greeting => "Welcome to Avalonia!";
 
-    public MainViewModel()
-    { }
-
     public MainViewModel(IEntitiesDataService<WeatherForecast> dataService, IApplicationDispatcher dispatcher)
     {
         this.dataService = dataService;
