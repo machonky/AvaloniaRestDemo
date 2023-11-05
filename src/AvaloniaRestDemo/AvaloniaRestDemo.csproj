@@ -39,18 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="appsettings.json" />
-    <EmbeddedResource Include="appsettings.Production.json" Condition="'$(AVALONIA_ENVIRONMENT)' == 'Production'">
-      <DependentUpon>appsettings.json</DependentUpon>
-      <LogicalName>$(RootNamespace).appsettings.env.json</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="appsettings.Development.json" Condition="'$(AVALONIA_ENVIRONMENT)' == 'Development'">
-      <DependentUpon>appsettings.json</DependentUpon>
-      <LogicalName>$(RootNamespace).appsettings.env.json</LogicalName>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AvaloniaRestDemo.Contracts\AvaloniaRestDemo.Contracts.csproj" />
   </ItemGroup>
 </Project>
