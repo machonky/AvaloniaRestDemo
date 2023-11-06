@@ -15,11 +15,19 @@
     <None Remove="appsettings.json" />
     <None Remove="appsettings.Production.json" />
   </ItemGroup>
-  
+
+  <!-- Conditionally add the appropriate appsettings file according to the AVALONIA_ENVIRONMENT variable -->
+  <!-- Variable name could be anything you want however. -->
   <ItemGroup>
-    <EmbeddedResource Include="appsettings.Development.json" />
     <EmbeddedResource Include="appsettings.json" />
-    <EmbeddedResource Include="appsettings.Production.json" />
+    <EmbeddedResource Include="appsettings.Production.json" Condition="'$(AVALONIA_ENVIRONMENT)' == 'Production'">
+      <DependentUpon>appsettings.json</DependentUpon>
+      <LogicalName>$(RootNamespace).appsettings.env.json</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appsettings.Development.json" Condition="'$(AVALONIA_ENVIRONMENT)' == 'Development'">
+      <DependentUpon>appsettings.json</DependentUpon>
+      <LogicalName>$(RootNamespace).appsettings.env.json</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
